@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inc.postbox.hashdroid.MainActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:padding="50dp"
+        android:background="@color/colorPrimaryDark"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hashdroid"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity=""
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="300dp"
+
+            android:layout_height="60dp"
+            android:layout_above="@+id/textView4"
+            android:layout_alignStart="@+id/result"
+            android:layout_marginBottom="11dp"
+            android:gravity="top"
+            android:hint="Enter here" />
+
+        <Button
+            android:id="@+id/enc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/adid"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/buttonstylebluegrey"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:text="ENCRYPT"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/enc"
+            android:layout_alignBottom="@+id/enc"
+            android:layout_alignEnd="@+id/textView4"
+            android:background="@drawable/buttonstylebluegrey"
+            android:drawableLeft="@drawable/ic_unlock_open_black_24dp"
+            android:text="DECRYPT"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:text="SELECT THE TYPE OF HASHING ALGORITHM"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:contentDescription="@android:string/selectTextMode"
+            android:gravity="center_horizontal"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            app:srcCompat="@android:drawable/ic_menu_help" />
+
+        <com.google.android.gms.ads.AdView
+
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/adid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5729325372447182/6044215204">
+
+
+        </com.google.android.gms.ads.AdView>
+
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/bottomscreen"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

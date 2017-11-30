@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Hashdroid</string>
+
+    <string-array name="hashalgorithm">
+
+        <item>None</item>
+        <item>md5</item>
+        <item>sha1</item>
+        <item>sha224</item>
+        <item>sha256</item>
+        <item>sha384</item>
+        <item>sha512</item>
+
+    </string-array>
+
+</resources>
+
